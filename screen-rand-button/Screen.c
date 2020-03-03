@@ -26,7 +26,7 @@ void mouse(int button, int state, int x, int y) {
 }
 
 void display(void) {
-	float x = 200.0f, y = 5.0f;;
+	float x = 0.0f, y = 0.0f;;
 
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
