@@ -10,9 +10,4 @@ A tarefa principal é criar três threads cada uma realizando uma das tarefas se
 ```
 
 ## Como usar?
-Você precisa instalar OpenGL e o GLUT (este método é para você que usa um derivado de Debian)
-```
-sudo apt-get install freeglut3-dev
-```
-Depois disto você pode rodar o programa usando `./main` ou compilando usando `gcc -o main main.c -lglut -lGL -lGLU -lm` e depois rodar.   
-
+Gere o arquivo main usando ```gcc -o main main.c -lpthread``` e apos isso, execute o arquivo gerado com ```./main```
