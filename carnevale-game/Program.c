@@ -38,7 +38,6 @@ void *game(void *inputPlayer) {
 
     if (player->status == 'P') {
       if (dice1 == dice2) {
-        // free(player->status);
         player->status = 'L';
       }
     } else if (dice1 == dice2) {
@@ -81,7 +80,7 @@ void *game(void *inputPlayer) {
       currStatusText  
     );
 
-    // sleep(1);
+    sleep(1);
   }
 
   end = clock();
