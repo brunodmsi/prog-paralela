@@ -46,6 +46,7 @@ void *game(void *inputPlayer) {
       int positionsToMove = dice1 + dice2;
       if (player->position + positionsToMove >= 100) {
         isFinished = 1;
+        printf("%s TERMINOU\n", player->nickname);
         continue;
       }
 
@@ -146,7 +147,6 @@ int main() {
   p2.status = 'L';
   p3.status = 'L';
   p4.status = 'L';
-  // printf("%s %s %s %s", p1.status, p2.status, p3.status, p4.status);
   p1.money = 0.0;
   p2.money = 0.0;
   p3.money = 0.0;
@@ -159,15 +159,15 @@ int main() {
 	for(int i = 0; i < BOARD_MAX; i++) {
 		board[i] = " ";
 	}	
-
-	int exec;
 	
-	exec = pthread_create(&lines[0], NULL, game, &p1);
-	exec = pthread_create(&lines[1], NULL, game, &p2);
-	exec = pthread_create(&lines[2], NULL, game, &p3);
-	exec = pthread_create(&lines[3], NULL, game, &p4);
+	int t1 = pthread_create(&lines[0], NULL, game, &p1);
+	int t2 = pthread_create(&lines[1], NULL, game, &p2);
+	int t3 = pthread_create(&lines[2], NULL, game, &p3);
+	int t4 = pthread_create(&lines[3], NULL, game, &p4);
 
-  sleep(1);
+  for (int i = 0; i < THREAD_NUM; i++) {
+    pthread_join(lines[i], NULL);
+  }
 
   float money[4];
   money[0] = p1.money;
@@ -238,6 +238,4 @@ int main() {
   printf("Mais rapido: \t%s\n\n", players[location_time - 1].nickname);
 
 	pthread_exit(NULL);
-
-  // printf("")
 }
