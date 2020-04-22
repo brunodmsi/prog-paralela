@@ -284,7 +284,7 @@ void print_intro() {
   clear();
   print_title();
   printw("Welcome to Horse Racing (tm)!\n");
-  printw("Written by Jon Merrill\n\n\n");
+  printw("Written by Bruno De Masi\n\n\n");
 
   printw("Story:\n");
   printw("  You are a gambling addict whose latest fix is betting on horse racing!\n");
