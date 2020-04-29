@@ -1,4 +1,3 @@
-
 /*
   * Centro Universitario do Estado do Para
   * Bruno De Masi e Joao Tome
@@ -106,7 +105,6 @@ int main(void) {
 	int i;
 
 	printf("\n*** Problema do Jantar dos filosofos ***\n"
-			"*** Trabalho 2 de SO1 ***\n"
 			"Solucao de N-1 Tokens\n");
 	printf("\nNumero filosofos: ");
 	scanf("%d", &NUM_PHILOSOPHERS);
