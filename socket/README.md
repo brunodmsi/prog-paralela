@@ -17,6 +17,8 @@ Ataque o servidor a partir de vários clientes enviando mensagens para o server.
 Para se ter um cenário mais real de DDOS (que é o que esse problema acaba implicando), foi desenvolvido um servidor usando TCP, e para o "ataque" foi desenvolvido um script que recebe a quantidade de clientes que desejam se conectar ao servidor, e cada um desses clientes fazem requisições infinitas ao servidor.   
 
 ### Como usar
+**AVISO: TESTADO APENAS NO UBUNTU VERSAO 20.04**
+
 - Servidor
 Para compilar o servidor, rode
 ```sh
