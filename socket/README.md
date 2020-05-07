@@ -19,14 +19,14 @@ Para se ter um cenário mais real de DDOS (que é o que esse problema acaba impl
 ### Como usar
 **AVISO: TESTADO APENAS NO UBUNTU VERSAO 20.04**
 
-- Servidor
+- Servidor   
 Para compilar o servidor, rode
 ```sh
 make server
 ```
 e rode usando `./server` 
 
-- Clientes
+- Clientes    
 Dê permissão ao script de clientes rodando 
 ```sh
 chmod +x ./client.sh
